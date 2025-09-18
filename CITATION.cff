@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "arxds: arXiv Dataset Suite"
+message: "If you use arxds, please cite this repository."
+authors:
+* family-names: "Charaf"
+  given-names: "Hamidi"
+  version: "0.1.0"
+  license: "Apache-2.0"
+  repository-code: "[https://github.com/charaf19/arxds](https://github.com/charaf19/arxds)"

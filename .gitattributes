@@ -1,0 +1,10 @@
+# file: .gitattributes
+* text=auto
+*.py     text eol=lf
+*.yml    text eol=lf
+*.yaml   text eol=lf
+*.toml   text eol=lf
+*.md     text eol=lf
+*.sh     text eol=lf
+# built site should retain originals; but it's ignored anyway
+site/** -text

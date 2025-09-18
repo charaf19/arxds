@@ -1,0 +1,8 @@
+# file: mkdocs.yml   <-- move here (delete docs/mkdocs.yml)
+site_name: arxds
+theme:
+  name: material
+nav:
+  - Home: docs/index.md
+  - CLI: docs/cli.md
+  - API: docs/api.md

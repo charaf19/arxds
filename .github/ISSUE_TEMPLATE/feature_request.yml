@@ -1,0 +1,29 @@
+# file: .github/ISSUE_TEMPLATE/feature_request.yml
+name: Feature request
+description: Suggest an idea to improve arxds
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for the suggestion! Tell us what problem this solves.
+  - type: input
+    id: context
+    attributes:
+      label: Research context
+      placeholder: "e.g., weekly arXiv digests for cs.CL"
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should arxds do?
+  - type: textarea
+    id: alt
+    attributes:
+      label: Alternatives
+      description: Other ways you considered
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["nice to have", "important", "critical"]
+      default: 0

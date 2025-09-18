@@ -1,0 +1,9 @@
+pytest
+ruff
+black
+mypy
+pre-commit
+mkdocs
+mkdocs-material
+mkdocstrings
+pip-audit

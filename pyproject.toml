@@ -1,0 +1,56 @@
+[build-system]
+requires = ["hatchling>=1.24.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "arxds"
+version = "0.1.0"
+description = "arXiv dataset suite: windowed fetch, filtering, temporal splits, JSONL outputs (with a CLI)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [{name="ArXDS Maintainers", email="maintainers@example.com"}]
+keywords = ["arxiv", "dataset", "cli", "research", "nlp", "ml"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: Apache Software License",
+  "Operating System :: OS Independent",
+]
+dependencies = [
+  "arxiv>=2.1.0",
+  "langdetect>=1.0.9",
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/charaf19/arxds"
+Documentation = "https://your-org.github.io/arxds/"
+Changelog = "https://github.com/your-org/arxds/blob/main/CHANGELOG.md"
+Issues = "https://github.com/your-org/arxds/issues"
+
+[project.scripts]
+arxds = "arxds.cli:app"
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+lint.select = ["E", "F", "I", "B", "UP"]
+# B008: Typer pattern is intentional; UP045: Py3.9 can't use `X | None`
+lint.ignore = ["E203", "B008", "UP045"]
+
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.mypy]
+python_version = "3.9"
+strict = false
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

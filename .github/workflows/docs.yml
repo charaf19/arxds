@@ -1,0 +1,28 @@
+# file: .github/workflows/docs.yml
+name: docs
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write   # needed for gh-pages branch push
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install mkdocs toolchain
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material mkdocstrings[python]
+
+      - name: Build & deploy docs (gh-pages)
+        run: mkdocs gh-deploy --force

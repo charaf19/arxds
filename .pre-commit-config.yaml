@@ -1,0 +1,36 @@
+# file: .pre-commit-config.yaml  (replace the existing content or edit hooks)
+repos:
+  - repo: https://github.com/psf/black
+    rev: 25.1.0
+    hooks:
+      - id: black
+        exclude: ^site/
+
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.13.0
+    hooks:
+      - id: ruff
+        args: [--fix]
+        exclude: ^site/
+
+  - repo: https://github.com/codespell-project/codespell
+    rev: v2.4.1
+    hooks:
+      - id: codespell
+        # Skip built site + minified/vendor assets and foreign-language wordlists
+        exclude: |
+          ^site/|
+          \.min\.(js|css)(\.map)?$|
+          ^docs/.*\.(min\.(js|css)|map)$
+        args: ["-L", "te,nd,crate,als,ot,ue,fo,ist,istes,toi,uee"]  # whitelist common false positives
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: end-of-file-fixer
+        exclude: ^site/
+      - id: trailing-whitespace
+        exclude: ^site/
+      - id: check-merge-conflict
+      - id: check-yaml
+        exclude: ^site/
