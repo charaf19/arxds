@@ -90,7 +90,6 @@ Open a **Feature request** issue and include:
 * **Relevance sampling:** Optional keyword- or embedding-guided sampling to target subtopics without manual filters.
 * **Safety & etiquette:** Built-in min delay, randomized jitter, and header notes aligning with arXiv API best practices.
 
-> Have another idea? Open an issue with “Feature:” in the title and follow the template above.
 
 ---
 
@@ -119,5 +118,4 @@ Apache-2.0. Not affiliated with arXiv.
 
 If this tool helped your research, please cite the repository (see `CITATION.cff`).
 
-```
 
