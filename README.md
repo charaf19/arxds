@@ -1,16 +1,4 @@
-**TL;DR:** here’s a drop-in `README.md` you can paste. It invites contributions and includes a “Next features” section with bullet-only descriptions (no code).
 
-### Plan
-
-* Keep concise intro + value prop.
-* Quickstart (install, CLI help).
-* Contributing guide (fork, venv, pre-commit, tests, PR checklist).
-* Governance & scope notes.
-* Feature proposals: how to suggest + template.
-* Roadmap: bullet-only “Next features” list with short descriptions (no code).
-* License, citation, acknowledgements.
-
-````md
 # arxds — arXiv Dataset Suite
 
 Reproducible arXiv dataset creation for NLP/ML: windowed fetching, deduplication, filtering, temporal splits, and JSONL outputs — with a simple CLI.
@@ -133,7 +121,3 @@ If this tool helped your research, please cite the repository (see `CITATION.cff
 
 ```
 
-**a.** Want me to also refresh `CONTRIBUTING.md` to match this README (PR checklist, feature template)?
-**b.** Should I convert the “Next features” bullets into labeled GitHub issues automatically?
-::contentReference[oaicite:0]{index=0}
-```
